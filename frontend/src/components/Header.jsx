@@ -11,7 +11,7 @@ const Header = () => {
           alt="Awaze restaurant logo"
         />
       </a>
-      <div className="hidden md:flex justify-between w-1/2 mr-10">
+      <div className="hidden md:flex justify-between w-1/2 text-xl mr-10">
         <a href="#home" className="cursor-pointer">
           Home
         </a>
