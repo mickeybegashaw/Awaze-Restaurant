@@ -3,7 +3,7 @@ import { IoMdMenu } from "react-icons/io";
 
 const Header = () => {
   return (
-    <div className="fixed bg-stone-950 w-screen h-20 md:h-28 text-white flex justify-between items-center ">
+    <div className="fixed bg-stone-950 w-screen h-20 md:h-28 text-white  flex justify-between items-center ">
       <a href="#home"  className="cursor-pointer">
         <img
           className="object-contain h-24 ml-2  md:h-36 md:ml-10"

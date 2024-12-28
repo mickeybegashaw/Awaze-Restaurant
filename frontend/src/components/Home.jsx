@@ -2,8 +2,9 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="bg-[url('./assets/hero3.png')] bg-center font-serif 
-     text-white bg-cover min-h-screen fixed w-screen flex pt-32 md:p-0 md:items-center"
+      
+      className="bg-[url('./assets/hero3.png')] font-serif 
+     text-white bg-cover min-h-screen  w-screen flex pt-32 md:p-0 md:items-center"
     >
       <div className="ml-5 md:ml-24 flex flex-col gap-3">
         <h1 className="text-4xl md:text-6xl font-bold">

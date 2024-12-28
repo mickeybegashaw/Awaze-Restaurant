@@ -1,6 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+* {
   scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 640px) {
+  #home {
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+@media screen and (min-width: 640px) {
+  #home {
+    background-attachment: fixed;
+    background-position: center 28px;
+  }
 }
