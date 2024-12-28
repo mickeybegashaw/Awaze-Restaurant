@@ -3,9 +3,9 @@ import { BiCheckDouble } from "react-icons/bi";
 
 const About = () => {
   return (
-    <div
+    <section
       id="about"
-      className="font-serif min-h-screen flex flex-col md:flex-row items-center md:justify-evenly gap-20  w-screen pt-20 text-white"
+      className="font-serif min-h-screen flex flex-col lg:flex-row items-center md:justify-evenly gap-20  w-screen pt-20 text-white"
     >
       <div className="w-3/4 md:w-2/5">
         <h1 className="text-4xl text-red-700 font-bold">Awaze Restaurant</h1>
@@ -30,11 +30,10 @@ const About = () => {
             <BiCheckDouble />
           </span>
           We also offer a selection of wines and beers to complement your meal.
-          So come in and enjoy a delicious meal with us today!
         </p>
       </div>
       <img className="h-2/6" src={aboutImg} alt="inside of awaze restaurant" />
-    </div>
+    </section>
   );
 };
 

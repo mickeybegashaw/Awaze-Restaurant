@@ -1,10 +1,11 @@
+import { Link } from "react-scroll";
+
 const Home = () => {
   return (
-    <div
+    <section
       id="home"
-      
       className="bg-[url('./assets/hero3.png')] font-serif 
-     text-white bg-cover min-h-screen  w-screen flex pt-32 md:p-0 md:items-center"
+     text-white bg-cover min-h-screen  w-screen flex pt-24 md:p-0 md:items-center"
     >
       <div className="ml-5 md:ml-24 flex flex-col gap-3">
         <h1 className="text-4xl md:text-6xl font-bold">
@@ -14,21 +15,34 @@ const Home = () => {
           The best Ethiopian restaurant in town
         </h2>
         <div className="flex gap-5">
-          <a
-            href="#menu"
+          <Link
+            to="menu"
+            smooth={true}
+            duration={900}
+            offset={-70}
             className="border-red-700 border-2 text-xl p-2 rounded-xl hover:bg-red-700 transition-all"
           >
             Our menu
-          </a>
-          <a
-            href="#contact"
+          </Link>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={900}
+            offset={-70}
             className="border-red-700 border-2 text-xl p-2 rounded-xl hover:bg-red-700 transition-all"
           >
             Contact us
-          </a>
-        </div><br /><br /><br /><br /><br /><br /><br />
+          </Link>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
-    </div>
+    </section>
   );
 };
 
