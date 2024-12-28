@@ -5,6 +5,14 @@
   scroll-behavior: smooth;
 }
 
+#about{
+  background-image: url("./assets/about-page-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 @media screen and (max-width: 640px) {
   #home {
     background-position: center;
