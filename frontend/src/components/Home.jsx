@@ -9,7 +9,7 @@ const Home = () => {
         <h1 className="text-4xl md:text-6xl font-bold">
           Welcome to <span className="text-red-700">Awaze</span>{" "}
         </h1>
-        <h2 className="text-2xl leading-loose">
+        <h2 className="text-xl md:text-2xl leading-loose">
           The best Ethiopian restaurant in town
         </h2>
         <div className="flex gap-5">
