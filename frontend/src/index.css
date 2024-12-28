@@ -1,9 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-* {
-  scroll-behavior: smooth;
-}
 
 #about{
   background-image: url("./assets/about-page-bg.png");
