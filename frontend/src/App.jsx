@@ -1,6 +1,6 @@
 import Header from "./components/Header";
 import Home from "./components/Home";
-import About from "./components/about";
+import About from "./components/About";
 import Menu from "./components/menu";
 import WhyUs from "./components/WhyUs";
 const App = () => {
