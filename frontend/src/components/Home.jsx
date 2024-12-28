@@ -16,13 +16,13 @@ const Home = () => {
         <div className="flex gap-5">
           <a
             href="#menu"
-            className="border-red-700 border-4 text-xl p-2 rounded-xl hover:bg-red-700 transition-all"
+            className="border-red-700 border-2 text-xl p-2 rounded-xl hover:bg-red-700 transition-all"
           >
             Our menu
           </a>
           <a
             href="#contact"
-            className="border-red-700 border-4 text-xl p-2 rounded-xl hover:bg-red-700 transition-all"
+            className="border-red-700 border-2 text-xl p-2 rounded-xl hover:bg-red-700 transition-all"
           >
             Contact us
           </a>

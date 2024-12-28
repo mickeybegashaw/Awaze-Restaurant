@@ -12,16 +12,16 @@ const Header = () => {
         />
       </a>
       <div className="hidden md:flex justify-between w-1/2 text-xl mr-10">
-        <a href="#home" className="cursor-pointer">
+        <a href="#home" className="cursor-pointer hover:text-red-700 transition-all">
           Home
         </a>
-        <a href="#about" className="cursor-pointer">
+        <a href="#about" className="cursor-pointer hover:text-red-700 transition-all">
           About
         </a>
-        <a href="#menu" className="cursor-pointer">
+        <a href="#menu" className="cursor-pointer hover:text-red-700 transition-all">
           Menu
         </a>
-        <a href="#contact" className="cursor-pointer">
+        <a href="#contact" className="cursor-pointer hover:text-red-700 transition-all">
           Contact
         </a>
       </div>
