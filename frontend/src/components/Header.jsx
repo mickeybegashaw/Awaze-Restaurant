@@ -5,7 +5,8 @@ import { Link } from "react-scroll";
 const Header = () => {
   return (
     <div className="fixed bg-stone-950 w-screen h-20 md:h-24 text-white flex justify-between items-center z-10">
-      <Link
+      <a href="#home">
+        <Link
         to="home"
         smooth={true}
         duration={900}
@@ -18,8 +19,12 @@ const Header = () => {
           alt="Awaze restaurant logo"
         />
       </Link>
+      </a>
+      
+
       <div className="hidden md:flex justify-between w-1/2 text-xl mr-10">
-        <Link
+      <a href="#home">
+         <Link
           to="home"
           smooth={true}
           duration={900}
@@ -29,7 +34,10 @@ const Header = () => {
         >
           Home
         </Link>
-        <Link
+      </a>
+       
+       <a href="#about">
+         <Link
           to="about"
           smooth={true}
           duration={900}
@@ -39,7 +47,10 @@ const Header = () => {
         >
           About
         </Link>
-        <Link
+       </a>
+       
+       <a href="#menu">
+         <Link
           to="menu"
           smooth={true}
           duration={900}
@@ -49,6 +60,9 @@ const Header = () => {
         >
           Menu
         </Link>
+       </a>
+       
+       <a href="#contact">
         <Link
           to="contact"
           smooth={true}
@@ -59,6 +73,8 @@ const Header = () => {
         >
           Contact
         </Link>
+       </a>
+        
       </div>
       <span className="md:hidden mr-10">
         <IoMdMenu size={30} />
