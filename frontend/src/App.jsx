@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Menu from "./components/menu";
 import WhyUs from "./components/WhyUs";
+import Footer from "./components/Footer";
 const App = () => {
   return (
 
@@ -15,6 +16,7 @@ const App = () => {
       <About />
       <WhyUs />
       <Menu />
+      <Footer />
       </div>
     </div>
   );
