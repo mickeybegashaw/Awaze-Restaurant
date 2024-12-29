@@ -18,21 +18,21 @@ const Footer = () => {
           <h3 className="font-bold">Usefull links</h3>
           <div className="text-red-700">
             <Link to="home" smooth={true} duration={900} offset={-70}>
-              <a href="#home">Home</a>
+              <p>Home</p>
             </Link>
             <br />
 
             <Link to="about" smooth={true} duration={900} offset={-70}>
-              <a href="#about">About</a>
+              <p>About</p>
             </Link>
             <br />
 
             <Link to="menu" smooth={true} duration={900} offset={-70}>
-              <a href="#menu">Menu</a>
+              <p>Menu</p>
             </Link>
             <br />
             <Link to="contact" smooth={true} duration={900} offset={-70}>
-              <a href="#contact">Contact</a>
+              <p>Contact</p>
             </Link>
           </div>
         </div>
