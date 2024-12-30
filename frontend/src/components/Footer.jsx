@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="leading-8">
+        <div className="leading-6">
           <h3 className="font-bold">Usefull links</h3>
           <div className="text-red-700">
             <Link to="home" smooth={true} duration={900} offset={-70}>
