@@ -51,7 +51,7 @@ const WhyUs = () => {
           </div>
         </div>
         <div className="marquee-container">
-      <div className="marquee">
+      <div className="marquee w-screen gap-10 md:gap-20">
         <img src={scl3} alt="Image 2" />
         <img src={scl4} alt="Image 3" />
         <img src={scl2} alt="Image 1" />

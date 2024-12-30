@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#about{
+#about {
   background-image: url("./assets/about-page-bg.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -13,48 +13,65 @@
 @media screen and (max-width: 640px) {
   #home {
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll; /* Avoid fixed background on mobile */
   }
 
+  .marquee img {
+    height: 150px; /* Adjust image size for small screens */
+  }
 }
+
 @media screen and (min-width: 640px) {
   #home {
     background-attachment: fixed;
     background-position: center 28px;
   }
+
+  .marquee img {
+    height: 200px; /* Image height for larger screens */
+  }
 }
 
+/* Marquee container styles */
 .marquee-container {
   margin-top: 5rem;
   width: 100%;
-  overflow: hidden; /* Hide the overflow to create the effect */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping */
+  display: flex; /* Display images horizontally */
+  position: relative; /* Necessary for animation */
+  padding-bottom: 10px;
+  scrollbar-width: none; /* For Firefox */
+
 }
 
+/* Animated marquee styles */
 .marquee {
-  gap: 80px; /* Space between images */
-  display: flex; /* Use flexbox to align images horizontally */
-  white-space: nowrap; /* Prevent text from wrapping */
-  animation: marquee 15s linear infinite; 
+  display: flex;
+  animation: marquee 25s linear infinite; /* Animation for scrolling the images */
 }
 
-
-
-.marquee img:hover{
-  filter:brightness(1)
-}
 .marquee img {
   border-radius: 10%;
-  transition: filter 0.5s; /* Smoothly transition the filter */
-  filter: brightness(0.5); /* Makes the image black and white */
-  height: 200px; /* Image height (adjust as needed) */
+  transition: filter 0.5s; /* Smoothly transition brightness on hover */
+  filter: brightness(0.5); /* Initial black-and-white effect */
+  height: 200px; /* Image height */
+  margin-right: 10px; /* Space between images */
+}
+
+/* Hover effect for images */
+.marquee img:hover {
+  filter: brightness(1); /* Brightness effect on hover */
 }
 
 /* Keyframes for the scrolling animation */
 @keyframes marquee {
   0% {
-    transform: translateX(1%); /* Start from the right */
+    transform: translateX(100%); /* Start from the right */
   }
   100% {
-    transform: translateX(-100%); /* End on the left */
+    transform: translateX(-100%); /* Move to the left */
   }
 }
+
+
