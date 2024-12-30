@@ -1,3 +1,11 @@
+import scrl1 from "../assets/scrl1.png";
+import scl3 from "../assets/scl3.png"
+import scl4 from "../assets/scl4.png"
+import scl5 from "../assets/scl5.png"
+import scl6 from "../assets/scl6.png"
+import scl7 from "../assets/scl7.png"
+import scl2 from "../assets/scl2.png"
+
 const WhyUs = () => {
   return (
     <div className="font-serif bg-stone-800 h-3/4 w-screen p-14 md:p-20 flex flex-col  ">
@@ -41,6 +49,22 @@ const WhyUs = () => {
               </p>
             </div>
           </div>
+        </div>
+        <div className="marquee-container">
+      <div className="marquee">
+        <img src={scl3} alt="Image 2" />
+        <img src={scl4} alt="Image 3" />
+        <img src={scl2} alt="Image 1" />
+        <img src={scl5} alt="Image 4" />
+        <img src={scl6} alt="Image 5" />
+        <img src={scl5} alt="Image 4" />
+        <img src={scl4} alt="Image 3" />
+        <img src={scl2} alt="Image 1" />
+        <img src={scl7} alt="Image 6" />
+        <img src={scrl1} alt="Image 7" />
+        <img src={scl6} alt="Image 5" />
+        <img src={scrl1} alt="Image 7" />
+    </div>
         </div>
       </div>
     </div>

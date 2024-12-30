@@ -15,10 +15,46 @@
     background-position: center;
     background-attachment: fixed;
   }
+
 }
 @media screen and (min-width: 640px) {
   #home {
     background-attachment: fixed;
     background-position: center 28px;
+  }
+}
+
+.marquee-container {
+  margin-top: 5rem;
+  width: 100%;
+  overflow: hidden; /* Hide the overflow to create the effect */
+}
+
+.marquee {
+  gap: 80px; /* Space between images */
+  display: flex; /* Use flexbox to align images horizontally */
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: marquee 15s linear infinite; 
+}
+
+
+
+.marquee img:hover{
+  filter:brightness(1)
+}
+.marquee img {
+  border-radius: 10%;
+  transition: filter 0.5s; /* Smoothly transition the filter */
+  filter: brightness(0.5); /* Makes the image black and white */
+  height: 200px; /* Image height (adjust as needed) */
+}
+
+/* Keyframes for the scrolling animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(1%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End on the left */
   }
 }
