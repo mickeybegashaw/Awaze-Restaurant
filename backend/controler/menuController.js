@@ -1,16 +1,34 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 import Menu from "../model/menu.model.js";
-
+import cloudinary from "../utils/cloudinaryConfig.js";
 // create menu
 const createMenu = async (req, res) => {
-  const { title, description, price, image } = req.body;
+  const { title, description, price } = req.body;
 
-  if (!title || !description || !price || !image) {
+  if (!title || !description || !price) {
     return res.status(400).json({ message: "Please fill all fields" });
   }
 
+  let imageUrl = null;
+  if (req.file) {
+    try {
+      const result = await cloudinary.uploader.upload(req.file.path, {
+        folder: "menus", 
+      });
+      imageUrl = {
+        public_id: result.public_id,
+        url: result.secure_url,
+      };
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json("Error uploading image to Cloudinary");
+    }
+  }
+
+
+
   try {
-    const menu = await Menu.create({ title, description, price, image });
+    const menu = await Menu.create({ title, description, price, image:imageUrl });
     res.status(201).json(menu);
   } catch (error) {
     console.log(error);
