@@ -3,7 +3,7 @@ import logoImg from "../assets/Awazelogo.png";
 
 const Footer = () => {
   return (
-    <section className="bg-stone-950 h-fit text-white py-10">
+    <section className="bg-stone-950 h-fit w-screen text-white py-10">
     
       <div className="flex flex-col items-center">
         <img src={logoImg} alt="the awaze restaurant logo" className="h-44 w-52" />
