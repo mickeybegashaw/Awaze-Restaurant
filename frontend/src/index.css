@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 #about {
   background-image: url("./assets/about-page-bg.png");
   background-repeat: no-repeat;

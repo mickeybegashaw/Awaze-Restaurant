@@ -5,12 +5,12 @@ import { BiCheckDouble } from "react-icons/bi";
 const About = () => {
   return (
     <section id="about">
-      <div className="font-serif min-h-screen flex flex-col lg:flex-row items-center md:justify-evenly gap-1 md:gap-20 w-screen  text-white">
+      <div className="font-sans min-h-screen flex flex-col lg:flex-row items-center md:justify-evenly gap-1 md:gap-20 w-screen  text-white">
         <div className="w-5/6 md:w-2/5 pt-10">
-          <h1 className="text-4xl text-red-700 font-bold">Awaze Restaurant</h1>
+          <h1 className="text-5xl text-red-700 font-bold font-cursive">Awaze Restaurant</h1>
           <br />
-          <br />
-          <p style={{ lineHeight: "3rem" }} className=" md:text-2xl">
+          
+          <p style={{ lineHeight: "3rem" }} className=" md:text-xl">
             Awaze Restaurant is a dining establishment in Addis Ababa, Ethiopia.{" "}
             <br />
             &nbsp; &nbsp; &nbsp;
@@ -33,7 +33,7 @@ const About = () => {
       <div className="font-serif min-h-screen flex flex-col lg:flex-row items-center md:justify-evenly gap-1 md:gap-20 w-screen pt-10 text-white">
         <div className="w-5/6 md:w-2/5">
           <br />
-          <p style={{ lineHeight: "3rem" }} className=" md:text-2xl">
+          <p style={{ lineHeight: "3rem" }} className=" md:text-xl">
             &nbsp; &nbsp; &nbsp;
             <span className="inline-block">
               <BiCheckDouble />

@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 const Header = () => {
   return (
-    <div className="fixed bg-stone-950 w-screen h-20 md:h-24 text-white flex justify-between items-center z-10">
+    <div className="fixed  bg-stone-950 w-screen h-20 md:h-24 text-white flex justify-between items-center z-10">
         <Link
         to="home"
         smooth={true}
@@ -20,7 +20,7 @@ const Header = () => {
       </Link>
       
 
-      <div className="hidden md:flex justify-between w-1/2 text-xl mr-10">
+      <div className="hidden md:flex justify-between w-1/2 text-base font-sans  mr-10">
          <Link
           to="home"
           smooth={true}
@@ -29,7 +29,7 @@ const Header = () => {
           className="cursor-pointer hover:text-red-700 transition-all"
           activeClass="text-red-700" // Active link color
         >
-          Home
+          HOME
         </Link>
        
          <Link
@@ -40,7 +40,7 @@ const Header = () => {
           className="cursor-pointer hover:text-red-700 transition-all"
           activeClass="text-red-700"
         >
-          About
+          ABOUT
         </Link>
        
          <Link
@@ -51,7 +51,7 @@ const Header = () => {
           className="cursor-pointer hover:text-red-700 transition-all"
           activeClass="text-red-700"
         >
-          Menu
+          MENU
         </Link>
        
         <Link
@@ -62,7 +62,7 @@ const Header = () => {
           className="cursor-pointer hover:text-red-700 transition-all"
           activeClass="text-red-700"
         >
-          Contact
+          CONTACT
         </Link>
         
       </div>
