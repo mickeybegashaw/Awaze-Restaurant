@@ -15,7 +15,7 @@ const menuReducer = (state, action) => {
 
 const MenuContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(menuReducer, {
-    menu: null,
+    menu: [],
   });
 
   return (
