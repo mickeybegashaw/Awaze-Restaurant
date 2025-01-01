@@ -1,6 +1,6 @@
 import { Link } from "react-scroll";
 
-const Home = () => {
+const Hero = () => {
   return (
     <section
       id="home"
@@ -46,4 +46,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Hero;

@@ -1,24 +1,19 @@
 import Header from "./components/Header";
-import Home from "./components/Home";
-import About from "./components/About";
-import WhyUs from "./components/WhyUs";
-import Footer from "./components/Footer";
-import Menu from "./components/theMenu"
+import Home from "./pages/Home";
+import { BrowserRouter , Routes , Route} from 'react-router-dom'
+import Admin from "./pages/Admin";
+
 const App = () => {
   return (
-
-    <div>
+    <BrowserRouter>
       <div>
-        <Header /> 
+        <Header />
       </div>
-      <div className="pt-20 md:pt-24">
-      <Home />
-      <About />
-      <WhyUs />
-      <Menu />
-      <Footer />
-      </div>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
