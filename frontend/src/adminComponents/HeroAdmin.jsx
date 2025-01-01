@@ -34,6 +34,7 @@ const AdminHero = () => {
     >
       <h1 className="text-red-700 font-bold text-3xl text-center mt-3">Admin panel</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-3 bg-stone-300 rounded-xl hover:shadow-black hover:shadow-xl w-11/12 place-items-center md:gap-10 mt-6 transition-shadow">
+      {loading && <h1 className="text-2xl text-stone-400 text-center">Loading menu...</h1>}
         {state && state.menu.map((menu)=>(
           <div key={menu._id} className="h-24 w-11/12 border-2 border-red-700 flex items-center rounded-xl justify-between "> 
           <img src={menu.image.url} loading="lazy" className="h-full w-24 md:w-32 object-cover rounded-xl" alt="image of menus" />

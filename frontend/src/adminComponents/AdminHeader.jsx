@@ -18,7 +18,7 @@ const Header = () => {
         />
       </Link>
       
-      <span className="mr-5">Back To Home page</span>
+      <span className="mr-10">Back To Home page</span>
     </div>
   );
 };
