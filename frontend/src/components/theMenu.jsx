@@ -41,6 +41,7 @@ const Menu = () => {
             >
               <img
                 src={menu.image.url}
+                loading="lazy"
                 alt="image of the menu"
                 className="w-full h-2/4 object-cover rounded-t-2xl"
               />
