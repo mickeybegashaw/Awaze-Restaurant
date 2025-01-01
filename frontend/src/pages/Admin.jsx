@@ -1,10 +1,16 @@
-
+import Header from "../adminComponents/AdminHeader";
+import AdminHero from "../adminComponents/adminHero";
 const Admin = () => {
   return (
-    <div className="pt-20 md:pt-24">
-      <h1>this is admin</h1>
+    <div>
+      <div>
+        <Header />
+      </div>
+      <div className="pt-20 md:pt-24">
+        <AdminHero />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Admin
+export default Admin;
