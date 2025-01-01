@@ -1,5 +1,5 @@
 import Header from "../adminComponents/AdminHeader";
-import AdminHero from "../adminComponents/adminHero";
+import AdminHero from "../adminComponents/HeroAdmin"; 
 const Admin = () => {
   return (
     <div>
