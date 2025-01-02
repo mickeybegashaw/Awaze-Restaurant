@@ -8,6 +8,9 @@ const menuReducer = (state, action) => {
       return {
         menu: action.payload,
       };
+      case "ADD_MENU":
+        return {
+          menu: [action.payload , ...state.menu ],}
     default:
       return state;
   }

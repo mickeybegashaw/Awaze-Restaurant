@@ -4,12 +4,14 @@ import axios from "axios";
 import { CiEdit } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
 import { IoMdAddCircleOutline } from "react-icons/io";
+import MenuAddModal from "./MenuAddModal";
 
 const baseUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
 const AdminHero = () => {
   const { state, dispatch } = UseMenuContext();
   const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const FetchMenu = async () => {
@@ -26,16 +28,20 @@ const AdminHero = () => {
     FetchMenu();
   }, [dispatch]);
 
-  return (
+
+
+  return ( 
     <section
-      id="home"
-      className="font-serif 
-      min-h-screen  w-screen flex items-center flex-col "
+    id="home"
+    className="font-serif 
+    min-h-screen  w-screen flex items-center flex-col "
     >
+      {showModal&& <MenuAddModal onclose={()=>setShowModal(false)} />}
       <h1 className="text-red-700 font-bold text-3xl text-center mt-3">
         Admin panel
       </h1>
-      <div className="bg-stone-300 w-11/12 h-16 flex justify-center items-center rounded-xl mt-3">
+
+      <div onClick={()=>setShowModal(true)} className="bg-stone-300 cursor-pointer w-11/12 h-16 flex justify-center items-center rounded-xl mt-3">
         <h1 className="text-xl text-stone-600 font-bold">
           {" "}
           <span className="inline-block">
@@ -54,7 +60,7 @@ const AdminHero = () => {
           state.menu.map((menu) => (
             <div
               key={menu._id}
-              className="h-24 w-11/12 border-2 border-red-700 flex items-center rounded-xl justify-between "
+              className="h-20 w-11/12 border-2 border-red-700 flex items-center rounded-xl justify-between "
             >
               <img
                 src={menu.image.url}
@@ -65,12 +71,12 @@ const AdminHero = () => {
               <div className="flex flex-col  w-fit">
                 <p className="text-xl">{menu.title}</p>
               </div>
-              <div className="flex flex-col gap-5 mr-5  w-fit">
-                <p>
-                  <CiEdit size={30} />
+              <div className="flex flex-col gap-3 mr-5  w-fit">
+              <p title="Delete" className="cursor-pointer">
+              <CiEdit size={20} />
                 </p>
-                <p>
-                  <MdDelete size={30} color="red" />
+                <p title="Delete" className="cursor-pointer">
+                  <MdDelete size={20} color="red" />
                 </p>
               </div>
             </div>
