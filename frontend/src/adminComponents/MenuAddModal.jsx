@@ -3,7 +3,7 @@ import axios from "axios";
 import UseMenuContext from "../hooks/useMenuContext";
 const baseUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
-const MenuAddModal = ({ onclose }) => {
+const MenuAddModal = ({ onClose }) => {
   const {dispatch} = UseMenuContext();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -54,6 +54,7 @@ const MenuAddModal = ({ onclose }) => {
         alert("Post successfully submitted!");
         // Reset form after successful submission
         setFormData({ title: "", description: "", price: "", image: null });
+        onClose();
       } else {
         setError("Posting menu failed. Please try again.");
       }
@@ -123,7 +124,7 @@ const MenuAddModal = ({ onclose }) => {
                   {loading ? "Submitting..." : "Add Menu"}
                 </button>
                 <span
-                  onClick={onclose}
+                  onClick={onClose}
                   className="bg-stone-800 hover:bg-stone-900 text-white w-1/2 p-2 rounded-md text-center"
                 >
                   Close
