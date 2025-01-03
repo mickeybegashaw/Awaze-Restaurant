@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/:match*",
+      "destination": "/index.html",
+      "permanent": true
+    }
+  ]
+}
