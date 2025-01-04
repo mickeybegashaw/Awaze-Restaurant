@@ -4,6 +4,7 @@ import WhyUs from "../components/WhyUs";
 import Footer from "../components/Footer";
 import Menu from "../components/theMenu";
 import Header from "../components/Header";
+import Contact from "../components/Contact";
 const Home = () => {
   return (
     <div>
@@ -15,6 +16,7 @@ const Home = () => {
         <About />
         <WhyUs />
         <Menu />
+        <Contact />
         <Footer />
       </div>
     </div>

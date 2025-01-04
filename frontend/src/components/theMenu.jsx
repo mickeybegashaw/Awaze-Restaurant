@@ -22,11 +22,10 @@ const Menu = () => {
     };
     FetchMenu();
   }, [dispatch]);
-  console.log(state);
   return (
     <section
       id="menu"
-      className="font-serif bg-stone-800 min-h-screen w-screen flex flex-col pt-10 "
+      className="font-serif  bg-stone-800 min-h-fit w-screen flex flex-col pt-10 "
     >
       <h2 className="text-5xl text-red-700 font-bold text-center font-cursive mb-5">
         Menus
