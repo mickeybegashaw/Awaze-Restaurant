@@ -1,8 +1,11 @@
 import logoImg from "../assets/Awazelogo.png";
 import { IoMdMenu } from "react-icons/io";
 import { Link } from "react-scroll";
+import SideBarr from "./SideBarr";
+import { useState } from "react";
 
 const Header = () => {
+  const [showSideBar, setShowSideBar] = useState(false);
   return (
     <div className="fixed  bg-stone-950 w-screen h-20 md:h-24 text-white flex justify-between items-center z-10">
         <Link
@@ -66,9 +69,11 @@ const Header = () => {
         </Link>
         
       </div>
-      <span className="md:hidden mr-10">
+      <span onClick={()=>setShowSideBar(true)} className="md:hidden mr-10">
         <IoMdMenu size={30} />
       </span>
+      {showSideBar && <SideBarr onClose={()=> setShowSideBar(false)} />}
+    
     </div>
   );
 };
