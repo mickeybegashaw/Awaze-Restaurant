@@ -20,7 +20,7 @@ const Header = () => {
       </Link>
       
 
-      <div className="hidden md:flex justify-between w-1/2 text-base font-sans  mr-10">
+      <div className="hidden md:flex justify-between w-1/2 text-base font-serif  mr-10">
          <Link
           to="home"
           smooth={true}
@@ -29,7 +29,7 @@ const Header = () => {
           className="cursor-pointer hover:text-red-700 transition-all"
           activeClass="text-red-700" // Active link color
         >
-          HOME
+          Home
         </Link>
        
          <Link
@@ -40,7 +40,7 @@ const Header = () => {
           className="cursor-pointer hover:text-red-700 transition-all"
           activeClass="text-red-700"
         >
-          ABOUT
+          About
         </Link>
        
          <Link
@@ -51,7 +51,7 @@ const Header = () => {
           className="cursor-pointer hover:text-red-700 transition-all"
           activeClass="text-red-700"
         >
-          MENU
+          Menu
         </Link>
        
         <Link
@@ -62,7 +62,7 @@ const Header = () => {
           className="cursor-pointer hover:text-red-700 transition-all"
           activeClass="text-red-700"
         >
-          CONTACT
+          Contact
         </Link>
         
       </div>
