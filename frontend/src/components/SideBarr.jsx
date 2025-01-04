@@ -8,7 +8,7 @@ const SideBarr = ({ onClose }) => {
       ></div>{" "}
       <div className="bg-black bg-opacity-90 w-4/5 text-black flex flex-col  items-center h-screen fixed top-0 right-0 z-50">
         
-        <div className="flex flex-col gap-5 mt-32 text-xl font-serif text-white font-bold"> 
+        <div className="flex flex-col gap-10 mt-32 text-xl font-serif text-white font-old"> 
           <Link
             to="home"
             smooth={true}
