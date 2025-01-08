@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background-color: #292524 ;
+}
 
 #about {
   background-image: url("./assets/about-page-bg.png");
