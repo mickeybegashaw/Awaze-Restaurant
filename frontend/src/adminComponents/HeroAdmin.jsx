@@ -79,6 +79,7 @@ const AdminHero = () => {
               <img src={menu.image.url} loading="lazy" className="h-full w-24 md:w-32 object-cover rounded-xl" alt="image of menus" />
               <div className="flex flex-col w-fit">
                 <p className="text-xl">{menu.title}</p>
+                <p className="text-xl">{menu.price} Birr</p>
               </div>
               <div className="flex flex-col gap-3 mr-5 w-fit">
                 {/* Edit Icon */}

@@ -4,7 +4,7 @@ import UseMenuContext from "../hooks/useMenuContext";
 const baseUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
 const MenuAddModal = ({ onClose }) => {
-  const {dispatch} = UseMenuContext();
+  const { dispatch } = UseMenuContext();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
@@ -21,11 +21,11 @@ const MenuAddModal = ({ onClose }) => {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    const maxSizeInBytes = 5 * 1024 * 1024; 
-  
+    const maxSizeInBytes = 5 * 1024 * 1024;
+
     if (file && file.size > maxSizeInBytes) {
       setError("File size exceeds 5MB. Please upload a smaller image.");
-      setFormData({ ...formData, image: null }); 
+      setFormData({ ...formData, image: null });
     } else {
       setError(null);
       setFormData({ ...formData, image: file });
@@ -52,7 +52,6 @@ const MenuAddModal = ({ onClose }) => {
 
       if (response.status >= 200 && response.status < 300) {
         alert("Post successfully submitted!");
-        // Reset form after successful submission
         setFormData({ title: "", description: "", price: "", image: null });
         onClose();
       } else {
@@ -73,15 +72,20 @@ const MenuAddModal = ({ onClose }) => {
         className="fixed top-0 left-0 w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center "
       ></div>
       <div className="flex flex-col items-center">
-        <div className="bg-white top-10 fixed z-10 w-11/12 md:w-2/3 rounded-2xl p-5 h-fit flex flex-col items-center">
-          <h1 className="text-red-700 font-bold text-xl md:text-2xl">Add Menu</h1>
+        <div
+          data-aos="fade-up"
+          className="bg-white top-10 fixed z-10 w-11/12 md:w-2/3 rounded-2xl p-5 h-fit flex flex-col items-center"
+        >
+          <h1 className="text-red-700 font-bold text-xl md:text-2xl">
+            Add Menu
+          </h1>
           <form
             onSubmit={handelFormSubmit}
             className="flex flex-col items-center gap-5 w-full mt-10"
           >
             <div className="flex flex-col gap-5 w-5/6 md:w-3/4">
               <input
-              required
+                required
                 type="text"
                 placeholder="Title"
                 name="title"
@@ -90,7 +94,8 @@ const MenuAddModal = ({ onClose }) => {
                 className="border-2 border-stone-500 p-2 w-full rounded-md"
               />
               <input
-              required
+                maxLength={100}
+                required
                 type="text"
                 placeholder="Description"
                 name="description"
@@ -99,7 +104,7 @@ const MenuAddModal = ({ onClose }) => {
                 className="border-2 border-stone-500 p-2 rounded-md"
               />
               <input
-              required
+                required
                 type="text"
                 placeholder="Price"
                 name="price"
@@ -108,7 +113,7 @@ const MenuAddModal = ({ onClose }) => {
                 className="border-2 border-stone-500 p-2 rounded-md"
               />
               <input
-              required
+                required
                 type="file"
                 accept="image/*"
                 name="image"

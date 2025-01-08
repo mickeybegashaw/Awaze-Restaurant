@@ -39,23 +39,25 @@ const Menu = () => {
             <div
               data-aos="fade-up"
               key={menu._id}
-              className="w-9/12 md:w-1/4 h-72 m-5 bg-stone-700 flex flex-col rounded-2xl"
+              className="w-9/12 md:w-1/4 h-72 m-5 bg-stone-700 flex flex-col items-center rounded-2xl"
             >
-              <img
+              <>
+                 <img
                 src={menu.image.url}
                 loading="lazy"
                 alt="image of the menu"
                 className="w-full h-2/4 object-cover rounded-t-2xl"
               />
+              <h3 className="absolute top-0 self-start bg-red-700 p-3 text-xl rounded-2xl">{menu.price} Birr</h3>
+              </>
+             
 
-              <div className="flex flex-col items-center mt-2">
+              <div className="flex flex-col items-center mt-2 w-11/12">
                 <p className="text-red-500 text-2xl ">{menu.title}</p>
-                <p className="">Description: {menu.description}</p>
+                <p className="">{menu.description}</p>
               </div>
 
-              <h3 className="bg-red-700 p-3 relative -top-52 w-fit text-xl rounded-2xl ">
-                {menu.price} Birr
-              </h3>
+              
             </div>
           ))}
       </div>
