@@ -33,13 +33,11 @@ const Menu = () => {
       {loading && (
         <h1 className="text-2xl text-stone-400 text-center">Loading menu...</h1>
       )}
-      <div
-        data-aos="fade-up"
-        className="flex md:flex-row flex-col md:flex-wrap md:w-11/12 md:justify-center items-center text-white font-serif"
-      >
+      <div className="flex md:flex-row flex-col md:flex-wrap md:w-11/12 md:justify-center items-center text-white font-serif">
         {state &&
           state.menu.map((menu) => (
             <div
+              data-aos="fade-up"
               key={menu._id}
               className="w-9/12 md:w-1/4 h-72 m-5 bg-stone-700 flex flex-col rounded-2xl"
             >
