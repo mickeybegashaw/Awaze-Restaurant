@@ -58,7 +58,7 @@ const AdminHero = () => {
       {showAddModal && <MenuAddModal onClose={() => setAddShowModal(false)} />}
       {showEditModal && <MenuEditModal menu={selectedMenu} onClose={() => setEditShowModal(false)} />}
       
-      <h1 className="text-red-700 font-bold text-3xl text-center mt-3">Admin panel</h1>
+      <h1 className="text-white font-bold text-3xl text-center mt-3">Admin panel</h1>
 
       {/* Add new menu button */}
       <div onClick={() => setAddShowModal(true)} className="bg-stone-300 cursor-pointer w-11/12 h-16 flex justify-center items-center rounded-xl mt-3">

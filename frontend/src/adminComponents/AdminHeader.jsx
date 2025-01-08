@@ -13,7 +13,7 @@ const Header = () => {
       </Link>
 
       <Link to={"/"}>
-        <span className="mr-10">Back To Home page</span>
+        <span className="mr-10 text-red-700">Back To Home page</span>
       </Link>
     </div>
   );
