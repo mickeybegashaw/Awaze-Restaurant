@@ -8,8 +8,24 @@ import scl2 from "../assets/scl2.png";
 
 const WhyUs = () => {
   return (
-    <div className="font-serif bg-stone-800 h-3/4 w-screen p-14 md:p-20 flex flex-col  ">
+    <div className="font-serif bg-stone-800 h-3/4 w-screen px-14 md:px-20 pb-20 flex flex-col  ">
       <div>
+      <div className="marquee-container mb-24">
+          <div className="marquee w-screen gap-10 md:gap-20">
+            <img src={scl3} alt="Image 2" />
+            <img src={scl4} alt="Image 3" />
+            <img src={scl2} alt="Image 1" />
+            <img src={scl5} alt="Image 4" />
+            <img src={scl6} alt="Image 5" />
+            <img src={scl5} alt="Image 4" />
+            <img src={scl4} alt="Image 3" />
+            <img src={scl2} alt="Image 1" />
+            <img src={scl7} alt="Image 6" />
+            <img src={scrl1} alt="Image 7" />
+            <img src={scl6} alt="Image 5" />
+            <img src={scrl1} alt="Image 7" />
+          </div>
+        </div>
         <h2 className="text-4xl md:text-5xl font-cursive text-red-700 font-bold ">
           Why Choose Our Restaurant
         </h2>
@@ -59,22 +75,7 @@ const WhyUs = () => {
             </div>
           </div>
         </div>
-        <div className="marquee-container">
-          <div className="marquee w-screen gap-10 md:gap-20">
-            <img src={scl3} alt="Image 2" />
-            <img src={scl4} alt="Image 3" />
-            <img src={scl2} alt="Image 1" />
-            <img src={scl5} alt="Image 4" />
-            <img src={scl6} alt="Image 5" />
-            <img src={scl5} alt="Image 4" />
-            <img src={scl4} alt="Image 3" />
-            <img src={scl2} alt="Image 1" />
-            <img src={scl7} alt="Image 6" />
-            <img src={scrl1} alt="Image 7" />
-            <img src={scl6} alt="Image 5" />
-            <img src={scrl1} alt="Image 7" />
-          </div>
-        </div>
+       
       </div>
     </div>
   );
