@@ -1,14 +1,10 @@
 import axios from "axios";
 import UseMenuContext from "../hooks/useMenuContext";
-import { useEffect , useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { useEffect, useState } from "react";
+
 const baseUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
 const Menu = () => {
-   useEffect(() => {
-      AOS.init({ duration: 1000 });
-    }, []);
   const { state, dispatch } = UseMenuContext();
   const [loading, setLoading] = useState(false);
 
@@ -20,7 +16,7 @@ const Menu = () => {
         dispatch({ type: "GET_MENU", payload: response.data });
       } catch (error) {
         console.log(error);
-      }finally{
+      } finally {
         setLoading(false);
       }
     };
@@ -34,8 +30,13 @@ const Menu = () => {
       <h2 className="text-5xl text-red-700 font-bold text-center font-cursive mb-5">
         Menus
       </h2>
-      {loading && <h1 className="text-2xl text-stone-400 text-center">Loading menu...</h1>}
-      <div data-aos='fade-up' className="flex md:flex-row flex-col md:flex-wrap md:w-11/12 md:justify-center items-center text-white font-serif">
+      {loading && (
+        <h1 className="text-2xl text-stone-400 text-center">Loading menu...</h1>
+      )}
+      <div
+        data-aos="fade-up"
+        className="flex md:flex-row flex-col md:flex-wrap md:w-11/12 md:justify-center items-center text-white font-serif"
+      >
         {state &&
           state.menu.map((menu) => (
             <div

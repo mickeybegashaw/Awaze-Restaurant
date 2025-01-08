@@ -1,14 +1,8 @@
 import aboutImg from "../assets/about.png";
 import aboutImg2 from "../assets/hero1.png";
 import { BiCheckDouble } from "react-icons/bi";
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const About = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
   return (
     <section id="about">
       <div className="font-sans min-h-screen flex flex-col lg:flex-row items-center md:justify-evenly gap-1 md:gap-20 w-screen  text-white">
