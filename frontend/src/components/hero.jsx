@@ -1,12 +1,18 @@
 import { Link } from "react-scroll";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <section
       id="home"
       className="bg-[url('./assets/heroo3.png')] font-serif 
      text-white bg-cover min-h-screen  w-screen flex pt-24 md:p-0 md:items-center"
     >
-      <div className="ml-5 md:ml-24 flex flex-col gap-3">
+      <div data-aos="fade-down" className="ml-5 md:ml-24 flex flex-col gap-3">
         <h1 className="text-5xl md:text-7xl  font-bold font-cursive">
           Welcome to <span className="text-red-700">Awaze</span>{" "}
         </h1>
