@@ -5,7 +5,7 @@ const AdminLogin = () => {
     <div className="bg-white w-screen h-screen flex flex-col items-center">
       <div className="px-4 md:px-0 w-11/12 md:w-4/6 bg-stone-300 h-2/3 mt-10 flex flex-col items-center">
         <div className="bg-stone-800 h-10 w-full flex justify-center item-center ">
-          <h1 className="text-xl text-white">log in to Admin panel</h1>
+          <h1 className="text-xl text-white">login to Admin panel</h1>
         </div>
         <img
           className="object-contain h-24 md:h-28 mt-10 "
@@ -18,7 +18,7 @@ const AdminLogin = () => {
             required
             id="user-name"
             type="text"
-            placeholder="User-Name"
+            placeholder="Enter UserName"
             className="border-stone-500 w-full rounded-md p-1 mb-5"
           />
           <br />
@@ -27,7 +27,7 @@ const AdminLogin = () => {
             required
             id="password"
             type="text"
-            placeholder="Password"
+            placeholder="Enter Password"
             className="border-stone-500 w-full rounded-md p-1 mb-5"
           />
           <button
