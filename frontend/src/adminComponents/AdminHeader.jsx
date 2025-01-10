@@ -19,7 +19,7 @@ const Header = () => {
       </Link>
 
       
-        <span className="mr-10 text-red-700" onClick={handelLogout}>Log Out</span>
+        <span className="mr-10 text-red-700 cursor-pointer" onClick={handelLogout}>Log Out</span>
      
     </div>
   );

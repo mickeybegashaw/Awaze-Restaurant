@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 import User from '../model/user.model.js'
 
 const createToken = (_id)=>{
-  return jwt.sign({_id},process.env.JWTSECRATEKEY , { expiresIn : "10d"} )
+  return jwt.sign({_id},process.env.JWTSECRATEKEY , { expiresIn : "1d"} )
 }
 
 //register user
