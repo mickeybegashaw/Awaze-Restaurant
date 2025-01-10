@@ -2,6 +2,7 @@ import axios from "axios";
 import logoImg from "../assets/Awazelogo.png";
 import UseUserContext from "../hooks/useUserContext";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const baseUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
 const AdminLogin = () => {
@@ -37,7 +38,7 @@ const AdminLogin = () => {
   };
   return (
     <div className="bg-white w-screen h-screen flex flex-col items-center">
-      <div className="px-4 md:px-0 w-11/12 md:w-4/6 bg-stone-300 h-2/3 mt-10 flex flex-col items-center">
+      <div className="px-4 md:px-0 w-11/12 md:w-4/6 bg-stone-300 h-3/4 mt-10 flex flex-col items-center">
         <div className="bg-stone-800 h-10 w-full flex justify-center item-center ">
           <h1 className="text-xl text-white">login to Admin panel</h1>
         </div>
@@ -77,7 +78,10 @@ const AdminLogin = () => {
           >
             {loading ? "...." : "log in"}
           </button>
-          <span className="md:ml-5  cursor-pointer"> Forgot Password?</span>
+          <span className="cursor-pointer"> Forgot Password?</span>
+          <Link to={"/"}>
+            <p className="text-center mt-10 text-blue-800">Back to Home page</p>
+          </Link>
         </form>
       </div>
     </div>

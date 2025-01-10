@@ -1,9 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
 import UseMenuContext from "../hooks/useMenuContext";
+import UseUserContext from "../hooks/useUserContext";
 const baseUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
 const MenuEditModal = ({ menu, onClose }) => {
+  const {user} = UseUserContext()
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [title, setTitle] = useState(menu.title);
@@ -24,7 +26,12 @@ const MenuEditModal = ({ menu, onClose }) => {
       setLoading(true);
       const response = await axios.patch(
         `${baseUrl}/api/menu/${menu._id}`,
-        updatedMenu
+        updatedMenu,
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
       );
       if (response.status >= 200 && response.status < 300) {
         dispatch({ type: "UPDATE_MENU", payload: response.data });

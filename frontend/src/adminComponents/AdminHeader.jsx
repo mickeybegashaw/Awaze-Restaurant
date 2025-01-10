@@ -1,7 +1,13 @@
 import logoImg from "../assets/Awazelogo.png";
 import { Link } from "react-router-dom";
+import UseUserContext from "../hooks/useUserContext";
 
 const Header = () => {
+    const {setUser} = UseUserContext()
+    const handelLogout = ()=>{
+      localStorage.removeItem("user");
+      setUser(null);
+    }
   return (
     <div className="fixed  bg-stone-950 w-screen h-20 md:h-24 text-white flex justify-between items-center z-10">
       <Link to={"/"}>
@@ -12,9 +18,9 @@ const Header = () => {
         />
       </Link>
 
-      <Link to={"/"}>
-        <span className="mr-10 text-red-700">Back To Home page</span>
-      </Link>
+      
+        <span className="mr-10 text-red-700" onClick={handelLogout}>Log Out</span>
+     
     </div>
   );
 };

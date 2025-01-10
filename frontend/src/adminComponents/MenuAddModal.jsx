@@ -1,9 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
 import UseMenuContext from "../hooks/useMenuContext";
+import UseUserContext from "../hooks/useUserContext";
 const baseUrl = import.meta.env.VITE_REACT_APP_API_URL;
 
 const MenuAddModal = ({ onClose }) => {
+  const {user}= UseUserContext()
   const { dispatch } = UseMenuContext();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -45,6 +47,7 @@ const MenuAddModal = ({ onClose }) => {
 
       const response = await axios.post(`${baseUrl}/api/menu/`, form, {
         headers: {
+          Authorization: `Bearer ${user.token}`, 
           "Content-Type": "multipart/form-data",
         },
       });
